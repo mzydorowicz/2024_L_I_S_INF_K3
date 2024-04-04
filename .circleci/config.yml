@@ -1,6 +1,8 @@
 version: 2.1 
 jobs:
   build-and-test:
+    docker:
+      - image: cimg/base:2022.09
     machine:
       image: ubuntu-2004:202104-01
       docker_layer_caching: true
