@@ -10,7 +10,7 @@ lint:
 	flake8 hello_world test
 docker_build:
 	docker build -t hello-world-printer .
-USERNAME=aleksanderbuczek
+USERNAME=aleksanderbuczekwsb
 TAG=$(USERNAME)/hello-world-printer-k3
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
