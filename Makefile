@@ -18,3 +18,8 @@ docker_push: docker_build
 	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
+docker_run: docker_build
+	docker run \
+		--name hello-world-printer-dev \
+		-p 5000:5000 \
+		-d hello-world-printer
